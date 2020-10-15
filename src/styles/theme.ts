@@ -17,11 +17,15 @@ const customTheme: DefaultTheme = {
     ...theme.radii,
     sm: '5px',
     md: '8px',
-    lg: '40px',
+    lg: '40',
   },
   fontSizes: {
     ...theme.fontSizes,
-    '6xl': '54px',
+    '2xl': '7rem',
+  },
+  lineHeights: {
+    ...theme.lineHeights,
+    'shorter': '0.8',
   },
   colors: {
     ...theme.colors,
@@ -29,6 +33,9 @@ const customTheme: DefaultTheme = {
       ...theme.colors.orange,
       400: '#FF6400'
     }
+  },
+  icons: {
+    ...theme.icons,
   }
 };
 
