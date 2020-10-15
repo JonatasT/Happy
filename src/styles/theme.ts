@@ -3,9 +3,9 @@ import { theme, DefaultTheme } from "@chakra-ui/core";
 const customTheme: DefaultTheme = {
   ...theme,
   fonts: {
-    body: 'Nunito, system-ui, sans-serif',
-    heading: 'Nunito, system-ui, sans-serif',
-    mono: 'Menlo, monospace',
+    body: "Nunito, system-ui, sans-serif",
+    heading: "Nunito, system-ui, sans-serif",
+    mono: "Menlo, monospace",
   },
   fontWeights: {
     ...theme.fontWeights,
@@ -15,28 +15,28 @@ const customTheme: DefaultTheme = {
   },
   radii: {
     ...theme.radii,
-    sm: '5px',
-    md: '8px',
-    lg: '40',
+    sm: "5px",
+    md: "8px",
+    lg: "40",
   },
   fontSizes: {
     ...theme.fontSizes,
-    '2xl': '7rem',
+    "2xl": "7rem",
   },
   lineHeights: {
     ...theme.lineHeights,
-    'shorter': '0.8',
+    shorter: "0.8",
   },
   colors: {
     ...theme.colors,
     orange: {
       ...theme.colors.orange,
-      400: '#FF6400'
-    }
+      400: "#FF6400",
+    },
   },
   icons: {
     ...theme.icons,
-  }
+  },
 };
 
 export default customTheme;
