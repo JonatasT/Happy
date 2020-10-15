@@ -34,8 +34,31 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": "error",
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-filename-extension": [
+        1, { "extensions": [
+            ".js", 
+            ".jsx", 
+            ".ts", 
+            ".tsx"] }],
+    "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+     ],
     "prettier/prettier": "error",
     "jest/no-export": "off"
+},
+'settings': {
+    'import/resolver': {
+        node: {
+            extensions: ['.js', '.jsx', '.ts', '.tsx'],
+            moduleDirectory: ['node_modules', 'src/'],
+        },
+    },
 },
 };
