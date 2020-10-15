@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 
-import ThemeContainer from "../contexts/theme/ThemeContainer";
+import ThemeContainer from "./contexts/theme/ThemeContainer";
 
 ReactDOM.render(
   <React.StrictMode>
