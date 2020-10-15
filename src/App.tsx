@@ -36,6 +36,7 @@ function App() {
         flexDir="column"
         alignItems="flex-end"
         height="100%"
+        marginRight="auto"
       >
         <Box height="100%" marginTop={260}>
           <Heading as="h1" size="lg" lineHeight="shorter" maxWidth={600}>
