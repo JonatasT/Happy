@@ -2,8 +2,8 @@
 // example test to get us started
 
 test("one plus one is two", () => {
-    expect(2 + 2).toBe(4);
-  });
-  
-  // TODO: Discover how to make TSC ignore modules when talking about test files.
-  export {};
+  expect(2 + 2).toBe(4);
+});
+
+// TODO: Discover how to make TSC ignore modules when talking about test files.
+export {};
