@@ -20,16 +20,18 @@ jobs:
       uses: actions/cache@v2
       with:
         # npm cache files are stored in `~/.npm` on Linux/macOS
-        path: ~/.yarn 
+        path: ~/.npm
         key: ${{ runner.OS }}-npm-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.OS }}-npm-
           ${{ runner.OS }}-
     - name: Install node dependencies
-      run: yarn install
-    - name: Run ESLint
-      run: yarn run lint
+      run: npm install
+    - name: ESLint Plus
+      # You may pin to the exact commit or the version.
+      # uses: bradennapier/eslint-plus-action@972d934f4b5b41945c4f489dc49717c80eb8be4c
+      uses: bradennapier/eslint-plus-action@v3.4.2
     - name: Run Typescript typechecking
-      run: yarn run typecheck
+      run: npm run typecheck
     - name: Run Tests
-      run: yarn test 
+      run: npm test 
