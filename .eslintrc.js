@@ -34,7 +34,7 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": "error",
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "prettier/prettier": "error",
     "jest/no-export": "off"
 },
