@@ -29,6 +29,8 @@ jobs:
       run: npm install
     - name: TypeScript Container Action Template
       uses: kevinpollet/typescript-container-action-template@v1
+      with:
+        name: CI
     - name: Run Tests
       run: npm test 
   
