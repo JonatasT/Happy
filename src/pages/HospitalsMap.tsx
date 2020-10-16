@@ -2,6 +2,8 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import { Grid, Flex, Box, Image, IconButton } from "@chakra-ui/core";
+import { Map, TileLayer } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 function HospitalsMap() {
   return (
@@ -12,12 +14,11 @@ function HospitalsMap() {
       templateRows="3fr 2fr 1fr"
       templateAreas="
                 'aside nav . .'
-                '. . . .'
+                'map . . .'
                 '. . . action'
             "
       justifyContent="center"
       alignItems="center"
-      backgroundColor="white"
     >
       <Flex
         gridArea="aside"
@@ -29,6 +30,7 @@ function HospitalsMap() {
         backgroundRepeat="no-repeat"
         backgroundColor="white"
         boxShadow="6px 8px 35px rgba(160, 160, 160, 0.14)"
+        zIndex={2}
       >
         <Box>
           <Link to="/">
@@ -49,10 +51,31 @@ function HospitalsMap() {
       </Flex>
 
       <Flex
+        gridArea="map"
+        flexDir="column"
+        height="100vh"
+        width="100vw"
+        position="absolute"
+        zIndex={1}
+      >
+        <Map
+          center={[-22.90134, -43.133]}
+          zoom={15}
+          style={{ width: "100%", height: "100%" }}
+        >
+          {/* <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"/> */}
+          <TileLayer
+            url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+          />
+        </Map>
+      </Flex>
+
+      <Flex
         gridArea="action"
         flexDir="column"
         height="100%"
         position="relative"
+        zIndex={3}
       >
         <Link to="/app">
           <IconButton
