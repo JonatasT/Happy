@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Heading, Grid, Flex, Box, IconButton } from "@chakra-ui/core";
+import Spin from "./components/Spin";
 
 function App() {
   return (
@@ -23,12 +24,29 @@ function App() {
       backgroundSize="cover"
       backgroundAttachment="fixed"
     >
-      <Flex gridArea="logo" flexDir="column" alignItems="flex-start">
+      <Flex 
+        gridArea="logo" 
+        flexDir="column" 
+        alignItems="flex-start"
+      >
         <img src="/logoHappyWhite.svg" alt="Happy" />
+        <Spin 
+          contentSpin="+"
+          position="absolute" 
+          timming={30}    
+          size={500} 
+          opacity={.1}
+        />
       </Flex>
 
       <Flex gridArea="lottieAnm" height="100%">
-        <p />
+        <Spin 
+          contentSpin="+"
+          position="relative" 
+          timming={10} 
+          size={300} 
+          opacity={.15}
+        />
       </Flex>
 
       <Flex
@@ -77,6 +95,13 @@ function App() {
         position="relative"
         textAlign="right"
       >
+          {<Spin 
+            contentSpin="-"
+            position="relative" 
+            timming={30}    
+            size={200} 
+            opacity={.15}
+          />}
         <IconButton
           variantColor="orange"
           aria-label="Encontrar lugar para visita"
@@ -96,6 +121,7 @@ function App() {
             transition: "1s",
           }}
         />
+      
       </Flex>
     </Grid>
   );
