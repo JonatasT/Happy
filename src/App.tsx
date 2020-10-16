@@ -2,8 +2,12 @@ import React from "react";
 
 import { Heading, Grid, Flex, Box, IconButton } from "@chakra-ui/core";
 import Spin from "./components/Spin";
+import ArrowAnimated from "./components/ArrowAnimated";
 
 function App() {
+  const [ isDisplayed, setIsDisplayed ] = React.useState(false);
+  const [ autoplay, setAutoplay ] = React.useState(false);
+
   return (
     <Grid
       as="main"
@@ -47,6 +51,10 @@ function App() {
           size={300} 
           opacity={.15}
         />
+        <Box position="absolute" marginTop={300} marginLeft={540}>
+          <ArrowAnimated autoplay={autoplay}/>
+        </Box>
+       
       </Flex>
 
       <Flex
@@ -57,12 +65,13 @@ function App() {
         marginRight="auto"
       >
         <Box height="100%" marginTop={260}>
-          <Heading as="h1" size="lg" lineHeight="shorter" maxWidth={600}>
+          <Heading as="h1" size="lg" lineHeight="shorter" maxWidth={600} onMouseOver={() => setAutoplay(!autoplay)}>
             Leve felicidade para o mundo
           </Heading>
 
           <Heading
-            as="h3"
+            as="h2"
+            fontSize={28}
             fontWeight={600}
             lineHeight="none"
             marginTop={4}
@@ -95,13 +104,13 @@ function App() {
         position="relative"
         textAlign="right"
       >
-          {<Spin 
+          <Spin 
             contentSpin="-"
             position="relative" 
             timming={30}    
             size={200} 
             opacity={.15}
-          />}
+          />
         <IconButton
           variantColor="orange"
           aria-label="Encontrar lugar para visita"
