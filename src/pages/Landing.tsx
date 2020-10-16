@@ -3,6 +3,7 @@ import React from "react";
 import { Heading, Grid, Flex, Box, IconButton } from "@chakra-ui/core";
 import Spin from "../components/Spin";
 import ArrowAnimated from "../components/ArrowAnimated";
+import { Link } from "react-router-dom";
 
 function Landing() {
     // const [isDisplayed, setIsDisplayed] = React.useState(false);
@@ -112,25 +113,27 @@ function Landing() {
                 size={200}
                 opacity={0.15}
                 />
-                <IconButton
-                variantColor="orange"
-                aria-label="Encontrar lugar para visita"
-                size="lg"
-                fontSize={25}
-                icon="arrow-forward"
-                width={20}
-                height={20}
-                marginLeft="auto"
-                borderRadius={30}
-                color="white"
-                transition="1s"
-                backgroundImage="linear-gradient(329.54deg, #FF6400 0%, #FF9900 100%)"
-                _hover={{
-                    backgroundImage:
-                    "linear-gradient(329.54deg, #FF6400 0%, #FF9900 70%)",
-                    transition: "1s",
-                }}
-                />
+                <Link to="/app">
+                    <IconButton
+                        variantColor="orange"
+                        aria-label="Encontrar lugar para visita"
+                        size="lg"
+                        fontSize={25}
+                        icon="arrow-forward"
+                        width={20}
+                        height={20}
+                        marginLeft="auto"
+                        borderRadius={30}
+                        color="white"
+                        transition="1s"
+                        backgroundImage="linear-gradient(329.54deg, #FF6400 0%, #FF9900 100%)"
+                        _hover={{
+                            backgroundImage:
+                            "linear-gradient(329.54deg, #FF6400 0%, #FF9900 70%)",
+                            transition: "1s",
+                        }}
+                    />
+                </Link>
             </Flex>
         </Grid>
     );
