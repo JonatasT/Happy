@@ -5,8 +5,8 @@ import Spin from "./components/Spin";
 import ArrowAnimated from "./components/ArrowAnimated";
 
 function App() {
-  const [ isDisplayed, setIsDisplayed ] = React.useState(false);
-  const [ autoplay, setAutoplay ] = React.useState(false);
+  // const [isDisplayed, setIsDisplayed] = React.useState(false);
+  const [autoplay, setAutoplay] = React.useState(false);
 
   return (
     <Grid
@@ -28,33 +28,28 @@ function App() {
       backgroundSize="cover"
       backgroundAttachment="fixed"
     >
-      <Flex 
-        gridArea="logo" 
-        flexDir="column" 
-        alignItems="flex-start"
-      >
+      <Flex gridArea="logo" flexDir="column" alignItems="flex-start">
         <img src="/logoHappyWhite.svg" alt="Happy" />
-        <Spin 
+        <Spin
           contentSpin="+"
-          position="absolute" 
-          timming={30}    
-          size={500} 
-          opacity={.1}
+          position="absolute"
+          timming={30}
+          size={500}
+          opacity={0.1}
         />
       </Flex>
 
       <Flex gridArea="lottieAnm" height="100%">
-        <Spin 
+        <Spin
           contentSpin="+"
-          position="relative" 
-          timming={10} 
-          size={300} 
-          opacity={.15}
+          position="relative"
+          timming={10}
+          size={300}
+          opacity={0.15}
         />
         <Box position="absolute" marginTop={300} marginLeft={540}>
-          <ArrowAnimated autoplay={autoplay}/>
+          <ArrowAnimated autoplay={autoplay} />
         </Box>
-       
       </Flex>
 
       <Flex
@@ -65,7 +60,13 @@ function App() {
         marginRight="auto"
       >
         <Box height="100%" marginTop={260}>
-          <Heading as="h1" size="lg" lineHeight="shorter" maxWidth={600} onMouseOver={() => setAutoplay(!autoplay)}>
+          <Heading
+            as="h1"
+            size="lg"
+            lineHeight="shorter"
+            maxWidth={600}
+            onMouseOver={() => setAutoplay(!autoplay)}
+          >
             Leve felicidade para o mundo
           </Heading>
 
@@ -104,13 +105,13 @@ function App() {
         position="relative"
         textAlign="right"
       >
-          <Spin 
-            contentSpin="-"
-            position="relative" 
-            timming={30}    
-            size={200} 
-            opacity={.15}
-          />
+        <Spin
+          contentSpin="-"
+          position="relative"
+          timming={30}
+          size={200}
+          opacity={0.15}
+        />
         <IconButton
           variantColor="orange"
           aria-label="Encontrar lugar para visita"
@@ -130,7 +131,6 @@ function App() {
             transition: "1s",
           }}
         />
-      
       </Flex>
     </Grid>
   );
