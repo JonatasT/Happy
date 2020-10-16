@@ -50,7 +50,7 @@ function App() {
             marginTop={4}
             maxWidth={600}
           >
-            Visite hospitais e mude o dia de alguém para melhor
+            Visite um hospital e mude o dia de alguém para melhor
           </Heading>
         </Box>
       </Flex>
