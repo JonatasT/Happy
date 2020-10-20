@@ -16,7 +16,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ##  Projeto
 
-O Happy originalmente é uma aplicação que conecta pessoas à casas de acolhimento institucional para fazer o dia de muitas crianças mais feliz. Essa proposta visa a criação de uma ferramenta similar, porém, com o objetivo de conectar pessoas à hospitais, de modo que essas pessoas se sintam acolhidas e tenham a melhor recuperação possível.
+O Happy originalmente é uma aplicação que conecta pessoas à casas de acolhimento institucional para fazer o dia de muitas crianças mais feliz. Essa proposta visa a criação de uma ferramenta similar, porém, com o objetivo de conectar pessoas à hospitais, de modo que esses pacientes se sintam acolhidos e tenham a melhor recuperação possível.
 ##  Layout
 
 Nos links abaixo você encontra o layout do projeto web e também do mobile originais. Lembrando que você precisa ter uma conta no [Figma](http://figma.com/) para acessá-lo.
