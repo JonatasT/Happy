@@ -1,6 +1,6 @@
 ![Happy](https://repository-images.githubusercontent.com/304207929/80475880-0fc7-11eb-8788-e463e47c1530)
 
-# Happy
+# Happy - Leve felicidade para o mundo
 
 ![Badge](https://img.shields.io/badge/<NLW/>-Rocketseat-%237159c1?style=for-the-badge&logo=nlw)
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger) _![](https://badgen.net/github/status/zeit/hyper/master/ci)_ ![](https://badgen.net/github/issues/micromatch/micromatch) ![](https://badgen.net/github/label-issues/rust-lang/rust/B-RFC-approved/closed) ![](https://badgen.net/github/prs/micromatch/micromatch) _![](https://badgen.net/github/commits/micromatch/micromatch) ![](https://badgen.net/github/last-commit/micromatch/micromatch)_
