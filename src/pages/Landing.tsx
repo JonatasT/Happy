@@ -13,15 +13,13 @@ function Landing() {
     <Grid
       as="main"
       height="100vh"
-      templateColumns="1fr 5fr 8fr 2fr 1fr"
-      templateRows="1fr 1fr 7fr 1fr 2fr"
+      templateColumns="2fr 1fr 1fr"
+      templateRows="1fr 2fr 1fr"
       templateAreas="
-                '. . . . .'
-                '. logo lottieAnm locality .'
-                '. headline . . .'
-                '. . . action .'
-                '. . . . .'
-            "
+        'logo lottieAnm locality'
+        'headline . .'
+        '. . action '
+      "
       justifyContent="center"
       alignItems="center"
       backgroundImage="url('/bg.png')"
@@ -29,8 +27,11 @@ function Landing() {
       backgroundSize="cover"
       backgroundAttachment="fixed"
     >
-      <Flex gridArea="logo" flexDir="column" alignItems="flex-start">
+      <Flex gridArea="logo" flexDir="column" alignItems="flex-start" paddingTop="1rem">
+        <Box marginLeft="10rem">
         <img src="/logoHappyWhite.svg" alt="Happy" />
+        </Box>
+        
         <Spin
           contentSpin="+"
           position="absolute"
@@ -48,7 +49,7 @@ function Landing() {
           size={300}
           opacity={0.15}
         />
-        <Box position="absolute" marginTop={300} marginLeft={540}>
+        <Box position="absolute" marginTop={300} marginLeft={240}>
           <ArrowAnimated autoplay={autoplay} />
         </Box>
       </Flex>
@@ -56,9 +57,8 @@ function Landing() {
       <Flex
         gridArea="headline"
         flexDir="column"
-        alignItems="flex-end"
         height="100%"
-        marginRight="auto"
+        marginLeft="10rem"
       >
         <Box height="100%" marginTop={260}>
           <Heading
@@ -90,8 +90,10 @@ function Landing() {
         textAlign="right"
         height="100%"
         position="relative"
+        paddingTop="1rem"
+        marginRight="10rem"
       >
-        <Heading as="p" marginTop={10} fontSize={24}>
+        <Heading as="p" marginTop={10}  fontSize={24}>
           Niterói
         </Heading>
         <Heading as="p" fontWeight={400} marginTop={2} fontSize={24}>
@@ -105,6 +107,7 @@ function Landing() {
         height="100%"
         position="relative"
         textAlign="right"
+        marginRight="10rem"
       >
         <Spin
           contentSpin="-"
