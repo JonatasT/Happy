@@ -21,7 +21,7 @@ const customTheme: DefaultTheme = {
   },
   fontSizes: {
     ...theme.fontSizes,
-    "2xl": "7rem",
+    "6xl": "7rem",
   },
   lineHeights: {
     ...theme.lineHeights,
