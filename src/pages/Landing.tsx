@@ -12,7 +12,12 @@ function Landing() {
   return (
     <Grid
       as="main"
-      height="100vh"
+      height = {[
+        "100%", // base
+        "100%", // 480px upwards
+        "100%", // 768px upwards
+        "100vh", // 992px upwards
+      ]}
       templateColumns="2fr 1fr 1fr"
       templateRows="1fr 2fr 1fr"
       templateAreas="
@@ -60,10 +65,10 @@ function Landing() {
         height="100%"
         marginLeft="10rem"
       >
-        <Box height="100%" marginTop={260}>
+        <Box height="100%" marginTop={["5rem", "10rem", "16rem"]}>
           <Heading
             as="h1"
-            size="lg"
+            fontSize="6xl"
             lineHeight="shorter"
             maxWidth={600}
             onMouseOver={() => setAutoplay(!autoplay)}
@@ -73,7 +78,7 @@ function Landing() {
 
           <Heading
             as="h2"
-            fontSize={28}
+            size="xl"
             fontWeight={600}
             lineHeight="none"
             marginTop={4}
@@ -126,6 +131,7 @@ function Landing() {
             width={20}
             height={20}
             marginLeft="auto"
+            marginTop="-5rem"
             borderRadius={30}
             color="white"
             transition="1s"
