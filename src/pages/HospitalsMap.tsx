@@ -24,7 +24,7 @@ function HospitalsMap() {
         gridArea="aside"
         flexDir="column"
         paddingTop={4}
-        paddingLeft={6}
+        paddingLeft={10}
         height="100%"
         width={419}
         backgroundImage="url('/sideShapeLarge.svg')"
@@ -49,7 +49,7 @@ function HospitalsMap() {
             lineHeight="42px"
             maxWidth={300}
             color="#5C8599"
-            marginTop={120}
+            marginTop={130}
           >
             Escolha um hospital no mapa
           </Heading>
@@ -62,7 +62,7 @@ function HospitalsMap() {
             marginTop={5}
             marginBottom="66px"
           >
-            Você pode sim mudar o dia de alguém :)
+            Você pode, sim, mudar o dia de alguém :)
           </Text>
           <Link to="/">
             <Image
