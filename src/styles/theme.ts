@@ -33,6 +33,10 @@ const customTheme: DefaultTheme = {
       ...theme.colors.orange,
       400: "#FF6400",
     },
+    gray: {
+      ...theme.colors.gray,
+      100: "5C8599",
+    },
   },
   icons: {
     ...theme.icons,

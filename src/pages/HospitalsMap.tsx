@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-import { Grid, Flex, Box, Image, IconButton } from "@chakra-ui/core";
+import { Grid, Flex, Box, Image, IconButton, Heading, Text } from "@chakra-ui/core";
 import { Map, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
@@ -23,10 +23,12 @@ function HospitalsMap() {
       <Flex
         gridArea="aside"
         flexDir="column"
-        align="center"
+        paddingTop={4}
+        paddingLeft={6}
         height="100%"
-        width={114}
-        backgroundImage="url('/sideShape.svg')"
+        width={419}
+        backgroundImage="url('/sideShapeLarge.svg')"
+        backgroundSize="initial"
         backgroundRepeat="no-repeat"
         backgroundColor="white"
         boxShadow="6px 8px 35px rgba(160, 160, 160, 0.14)"
@@ -36,17 +38,41 @@ function HospitalsMap() {
           <Link to="/">
             <Image
               marginTop={8}
-              marginRight={1}
-              src="/logoHappyWhiteSymbol.svg"
+              src="/logoHappyWhite.svg"
+              height="45px"
               alt="Happy"
             />
           </Link>
-          <Image
-            marginTop="10rem"
-            marginLeft={2}
-            src="/happy.svg"
-            alt="Happy"
-          />
+          <Heading
+            as="h1"
+            fontSize="40px"
+            lineHeight="42px"
+            maxWidth={300}
+            color="#5C8599"
+            marginTop={120}
+          >
+            Escolha um hospital no mapa
+          </Heading>
+          <Text 
+            fontSize="lg"
+          
+            lineHeight="shorter"
+            maxWidth={300}
+            color="#5C8599"
+            marginTop={5}
+            marginBottom="66px"
+          >
+            Você pode sim mudar o dia de alguém :)
+          </Text>
+          <Link to="/">
+            <Image
+              marginTop={8}
+              marginBottom={10}
+              src="/hamburgerIcon.svg"
+              height="15px"
+              alt="Happy"
+            />
+          </Link>
         </Box>
       </Flex>
 
