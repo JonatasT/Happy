@@ -33,6 +33,7 @@ function HospitalsMap() {
         backgroundColor="white"
         boxShadow="6px 8px 35px rgba(160, 160, 160, 0.14)"
         zIndex={2}
+        borderBottomRightRadius={50}
       >
         <Box>
           <Link to="/">
