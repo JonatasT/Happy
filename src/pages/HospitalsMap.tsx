@@ -57,7 +57,7 @@ function HospitalsMap() {
           <Text 
             fontSize="lg"
           
-            lineHeight="shorter"
+            lineHeight="24px"
             maxWidth={300}
             color="#5C8599"
             marginTop={5}
