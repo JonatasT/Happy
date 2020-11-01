@@ -3,9 +3,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Grid, Flex, Box, Image, IconButton, Heading, Text } from "@chakra-ui/core";
 import { Map, TileLayer } from "react-leaflet";
+import ArrowAnimated from "../components/ArrowAnimated";
 import "leaflet/dist/leaflet.css";
+import HeartAnimated from "../components/HeartAnimated";
 
 function HospitalsMap() {
+  const [autoplay, setAutoplay] = React.useState(false);
+
   return (
     <Grid
       as="main"
@@ -65,6 +69,10 @@ function HospitalsMap() {
           >
             Você pode, sim, mudar o dia de alguém :)
           </Text>
+          <Box position="absolute">
+            
+          </Box>
+          
           <Link to="/">
             <Image
               marginTop={8}
@@ -103,8 +111,10 @@ function HospitalsMap() {
         height="100%"
         position="relative"
         zIndex={3}
+        marginBottom={8}
       >
         <Link to="/app">
+        <HeartAnimated autoplay={autoplay} marginBottom={-5}/>
           <IconButton
             variantColor="orange"
             aria-label="Encontrar lugar para visita"
@@ -116,6 +126,7 @@ function HospitalsMap() {
             marginLeft="auto"
             borderRadius={30}
             color="white"
+            onClick={() => setAutoplay(!autoplay)}
             transition="1s"
             backgroundImage="linear-gradient(329.54deg, #FF6400 0%, #FF9900 100%)"
             _hover={{
