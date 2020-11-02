@@ -8,7 +8,7 @@ import heartAnimated from "../components/heartAnimated.json";
 import Lottie from "react-lottie";
 
 function HospitalsMap(props: { autoplay: any; }) {
-  const [isLiked, setLikeState] = useState(false);
+  const [isLoved, setLoveState] = useState(false);
   const [animationState, setAnimationState] = useState({
     isStopped: true, isPaused: false,
     direction: -1,
@@ -161,7 +161,7 @@ function HospitalsMap(props: { autoplay: any; }) {
                   ? reverseAnimation
                   : normalAnimation,
               })
-              setLikeState(!isLiked);
+              setLoveState(!isLoved);
             }}
             transition="1s"
             backgroundImage="linear-gradient(329.54deg, #FF6400 0%, #FF9900 100%)"
