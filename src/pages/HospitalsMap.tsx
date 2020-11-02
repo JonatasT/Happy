@@ -1,14 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import { Grid, Flex, Box, Image, IconButton, Heading, Text } from "@chakra-ui/core";
 import { Map, TileLayer } from "react-leaflet";
-import ArrowAnimated from "../components/ArrowAnimated";
 import "leaflet/dist/leaflet.css";
-import HeartAnimated from "../components/HeartAnimated";
+import heartAnimated from "../components/heartAnimated.json";
+import Lottie from "react-lottie";
 
-function HospitalsMap() {
-  const [autoplay, setAutoplay] = React.useState(false);
+function HospitalsMap(props: { autoplay: any; }) {
+  const [isLoved, setLoveState] = useState(false);
+  const [animationState, setAnimationState] = useState({
+    isStopped: true, isPaused: false,
+    direction: -1,
+  });
+
+
+  const { autoplay } = props;
+
+  const defaultOptions = {
+    loop: false,
+    autoplay,
+    animationData: heartAnimated,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
 
   return (
     <Grid
@@ -114,7 +131,14 @@ function HospitalsMap() {
         marginBottom={8}
       >
         <Link to="/app">
-        <HeartAnimated autoplay={autoplay} marginBottom={-5}/>
+          <Box marginBottom={-5}>
+            <Lottie
+              options={defaultOptions}
+              direction={animationState.direction}
+              isStopped={animationState.isStopped}
+              isPaused={animationState.isStopped}
+            />
+          </Box>
           <IconButton
             variantColor="orange"
             aria-label="Encontrar lugar para visita"
@@ -126,7 +150,19 @@ function HospitalsMap() {
             marginLeft="auto"
             borderRadius={30}
             color="white"
-            onClick={() => setAutoplay(!autoplay)}
+            onClick={() => {
+              const reverseAnimation = -1;
+              const normalAnimation = 1;
+      
+              setAnimationState({
+                ...animationState,
+                isStopped: false,
+                direction: animationState.direction === normalAnimation 
+                  ? reverseAnimation
+                  : normalAnimation,
+              })
+              setLoveState(!isLoved);
+            }}
             transition="1s"
             backgroundImage="linear-gradient(329.54deg, #FF6400 0%, #FF9900 100%)"
             _hover={{
