@@ -13,8 +13,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 -   [Node.js](https://nodejs.org/en/)
 -   [React](https://reactjs.org)
--   [React Native](https://facebook.github.io/react-native/)
--   [Expo](https://expo.io/)
 -   [TypeScript](https://www.typescriptlang.org/)
 -   [Chakra-UI](https://chakra-ui.com/)
 
@@ -25,8 +23,8 @@ O Happy originalmente é uma aplicação que conecta pessoas à casas de acolhim
 
 Nos links abaixo você encontra o layout do projeto web e também do mobile originais. Lembrando que você precisa ter uma conta no [Figma](http://figma.com/) para acessá-lo.
 
--   [Layout Web](https://www.figma.com/file/mDEbnoojksG4w8sOxmudh3/Happy-Web)
--   [Layout Mobile](https://www.figma.com/file/X27FfVxAgy9f5IFa7ONlph/Happy-Mobile)
+-   [Layout Web](Em breve)
+-   [Layout Mobile](Em breve)
 
 Em breve minha versão estará disponível para acesso.
 
