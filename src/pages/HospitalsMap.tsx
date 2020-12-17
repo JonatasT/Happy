@@ -1,13 +1,24 @@
 import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
-import { Grid, Flex, Box, Image, IconButton, Heading, Text } from "@chakra-ui/core";
+import { 
+  Grid, 
+  Flex, 
+  Box, 
+  Image, 
+  Button, 
+  IconButton, 
+  Heading, 
+  Text 
+  } from "@chakra-ui/core";
+import { FcMenu } from "react-icons/fc";
 import { Map, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import heartAnimated from "../components/heartAnimated.json";
 import Lottie from "react-lottie";
 
 function HospitalsMap(props: { autoplay: any; }) {
+  const [isToggleActive, setIsToggleActive] = useState(true);
   const [isLoved, setLoveState] = useState(false);
   const [animationState, setAnimationState] = useState({
     isStopped: true, isPaused: false,
@@ -47,8 +58,8 @@ function HospitalsMap(props: { autoplay: any; }) {
         paddingTop={4}
         paddingLeft={10}
         height="100%"
-        width={419}
-        backgroundImage="url('/sideShapeLarge.svg')"
+        width={!isToggleActive? 120: 419}
+        backgroundImage={!isToggleActive? null :"url('/sideShapeLarge.svg')"}
         backgroundSize="initial"
         backgroundRepeat="no-repeat"
         backgroundColor="white"
@@ -60,45 +71,47 @@ function HospitalsMap(props: { autoplay: any; }) {
           <Link to="/">
             <Image
               marginTop={8}
-              src="/logoHappyWhite.svg"
-              height="45px"
+              src={!isToggleActive? "/happy.svg": "/logoHappyWhite.svg"}
+              height={!isToggleActive? "100px": "45px"}
               alt="Happy"
             />
           </Link>
-          <Heading
-            as="h1"
-            fontSize="40px"
-            lineHeight="42px"
-            maxWidth={300}
-            color="#5C8599"
-            marginTop={130}
+          {isToggleActive?
+            <>
+              <Heading
+                as="h1"
+                fontSize="40px"
+                lineHeight="42px"
+                maxWidth={300}
+                color="#5C8599"
+                marginTop={130}
+              >
+                Escolha um hospital no mapa
+              </Heading>
+              <Text 
+                fontSize="lg"
+                lineHeight="24px"
+                maxWidth={300}
+                color="#5C8599"
+                marginTop={5}
+                marginBottom="66px"
+              >
+                Você pode, sim, mudar o dia de alguém :)
+              </Text>
+            </>
+          : ""}
+
+          <Button
+            onClick={() => setIsToggleActive(isToggleActive? false: true)}
+            paddingRight={!isToggleActive? "auto": 330}
+            marginLeft={!isToggleActive? -65: -30}
+            marginTop={!isToggleActive? "80px": 8}
+            marginBottom={10}
+            color="black"
           >
-            Escolha um hospital no mapa
-          </Heading>
-          <Text 
-            fontSize="lg"
-          
-            lineHeight="24px"
-            maxWidth={300}
-            color="#5C8599"
-            marginTop={5}
-            marginBottom="66px"
-          >
-            Você pode, sim, mudar o dia de alguém :)
-          </Text>
-          <Box position="absolute">
-            
-          </Box>
-          
-          <Link to="/">
-            <Image
-              marginTop={8}
-              marginBottom={10}
-              src="/hamburgerIcon.svg"
-              height="15px"
-              alt="Happy"
-            />
-          </Link>
+            <FcMenu size="md"/>
+          </Button>
+
         </Box>
       </Flex>
 
