@@ -86,6 +86,9 @@ function Landing() {
           >
             Visite um hospital e mude o dia de alguém para melhor
           </Heading>
+          <Heading position="absolute" as="p" fontWeight={300} marginTop="2rem" marginRight="20px" fontSize={18} >
+            © Happy 2020. Todos os Direitos Reservados
+          </Heading>
         </Box>
       </Flex>
 
@@ -104,6 +107,7 @@ function Landing() {
         <Heading as="p" fontWeight={400} marginTop={2} fontSize={24}>
           Rio de Janeiro
         </Heading>
+        
       </Flex>
 
       <Flex
@@ -143,6 +147,10 @@ function Landing() {
             }}
           />
         </Link>
+        
+         
+        
+
       </Flex>
     </Grid>
   );
