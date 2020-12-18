@@ -105,7 +105,7 @@ function HospitalsMap(props: { autoplay: any; }) {
             onClick={() => setIsToggleActive(isToggleActive? false: true)}
             paddingRight={!isToggleActive? "auto": 330}
             marginLeft={!isToggleActive? -65: -30}
-            marginTop={!isToggleActive? "80px": 8}
+            marginTop={!isToggleActive? "180px": 8}
             marginBottom={10}
             color="black"
           >
