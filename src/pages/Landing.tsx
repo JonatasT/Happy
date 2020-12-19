@@ -87,7 +87,7 @@ function Landing() {
             Visite um hospital e mude o dia de alguém para melhor
           </Heading>
           <Heading position="absolute" as="p" fontWeight={300} marginTop="2rem" marginRight="20px" fontSize={18} >
-            © Happy 2020. Todos os Direitos Reservados
+            Made by {<a href="https://github.com/JonatasT">JonatasT</a>} © Happy 2020. Todos os Direitos Reservados
           </Heading>
         </Box>
       </Flex>
