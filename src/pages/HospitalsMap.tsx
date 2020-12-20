@@ -47,7 +47,7 @@ function HospitalsMap(props: { autoplay: any; }) {
       templateAreas="
                 'aside nav . .'
                 'map . . .'
-                '. . . action'
+                '. footer . action'
             "
       justifyContent="center"
       alignItems="center"
@@ -134,7 +134,22 @@ function HospitalsMap(props: { autoplay: any; }) {
           />
         </Map>
       </Flex>
-
+      <Flex
+        gridArea="footer"
+        position="relative"
+        zIndex={1}
+      >
+        <Heading 
+          as="p" 
+          marginTop={120} 
+          marginLeft={300} 
+          fontWeight={300} 
+          fontSize={18} 
+          width={550}
+        >
+          Made by {<a href="https://github.com/JonatasT">JonatasT</a>} © Happy 2020. Todos os Direitos Reservados
+        </Heading>
+      </Flex>
       <Flex
         gridArea="action"
         flexDir="column"
