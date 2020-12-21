@@ -136,13 +136,13 @@ function HospitalsMap(props: { autoplay: any; }) {
       </Flex>
       <Flex
         gridArea="footer"
-        position="relative"
+        position="absolute"
         zIndex={1}
       >
         <Heading 
           as="p" 
-          marginTop={120} 
-          marginLeft={300} 
+          marginTop="calc(100vh - 50px)" 
+          marginLeft="calc(37vw)" 
           fontWeight={300} 
           fontSize={18} 
           width={550}
